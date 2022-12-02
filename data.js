@@ -1804,13 +1804,14 @@ const fruit = [
 
 const container = document.getElementById('container')
 
-const append = ((Name,Dprice,Oprice,Image) => {
+const append = ((Name,qty,Dprice,Oprice,Image) => {
     container.innerHTML += ` <div class="box">
             <div class="img">
 <img src=${Image} alt="">
             </div>
             <div class="desc">
               <span>${Name}</span>
+              <span>${qty}</span>
               <span>${Dprice}</span>
               <s>${Oprice}</s>
             </div>
@@ -1818,6 +1819,6 @@ const append = ((Name,Dprice,Oprice,Image) => {
 })
 
 fruits.map((item) => {
-    return append(item.Name, item.Dprice, item.Oprice,item.Image);
+    return append(item.Name,item.Qty, item.Dprice, item.Oprice,item.Image);
 })
 
